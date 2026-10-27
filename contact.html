@@ -1,0 +1,113 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Contact</title>
+
+    <meta charset="UTF-8">
+
+    <!-- Ensures the site adapts to phones, tablets and desktops -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Brief site description for search engines -->
+    <meta name="description" content="Prime Ops Congo - Optimisation, Performance, Solutions.">
+    <meta name="keywords" content="Prime Ops, Congo, Mining, Logistics, Engineering, DRC, South Africa">
+    <meta name="author" content="Chela Yav">
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body style="background-color:bisque;">
+
+    <header>
+        <nav>
+            <img src="images/Logo.jpeg" style="width:65px;height:75px" alt="Prime Ops Logo">
+
+            <a href="home.html">Home |</a>
+            <a href="about.html">About us |</a>
+            <a href="services.html">Products and services |</a>
+            <a href="gallery.html">Gallery |</a>
+            <a href="contact.html">Contact us |</a>
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- Contact Card -->
+        <div class="contact-card">
+            <h2>Contact Prime Ops Congo</h2>
+
+            <p><strong>Headquarters:</strong> Lubumbashi, DRC</p>
+
+            <p>
+                <strong>Email:</strong>
+                <a href="mailto:contact@primeopscongo.cd">
+                    contact@primeopscongo.cd
+                </a>
+            </p>
+
+            <p><strong>Phone:</strong> +243 971 862 243</p>
+        </div>
+
+        <!-- Contact Form -->
+        <form action="st10494424@rcconnect.edu.za" id="contactForm" novalidate>
+
+            <div class="form-group">
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" name="name"
+                       required minlength="3">
+
+                <small class="error-msg" id="nameError"></small>
+            </div>
+
+            <div class="form-group">
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone"
+                       required placeholder="0821234567">
+
+                <small class="error-msg" id="phoneError"></small>
+            </div>
+            <div class="form-group">
+                <label for="email">Email Address:</label>
+                <input type="email" id="email" name="email"
+                       required placeholder="you@example.com">
+
+                <small class="error-msg" id="emailError"></small>
+            </div>
+                <div class="form-group">
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" rows="5"
+                              required placeholder="Your message here..."></textarea>
+
+                    <small class="error-msg" id="messageError"></small>
+                </div>
+            <button type="submit">Submit Message</button>
+        <!-- Success message -->
+    <p id="successMessage" role="status" aria-live="polite"></p>
+      <h2 style="text-align:center;">Send Us a Message</h2>
+
+<p style="text-align:center;">
+    Complete the form below and we will be happy to assist you.
+</p>
+
+<form action="#" id="contactForm" novalidate>
+
+
+        </form>
+
+        <!-- Welcome Message -->
+        <p id="welcome-text" style="text-align:center;">
+            Welcome to Prime Ops Congo
+        </p>
+
+        <button type="button" onclick="changeContent()">Change Content</button>
+
+    </main>
+
+    <footer style="color:blue;">&copy; ST10494424#DISD1_PRIME_OPS<p id="datetime"></p></footer>
+
+    <!-- Link to the JavaScript file -->
+    <script src="Java/script.js"></script>
+
+</body>
+</html>
