@@ -1,113 +1,458 @@
 
+
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <title>Contact</title>
 
     <meta charset="UTF-8">
-
-    <!-- Ensures the site adapts to phones, tablets and desktops -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Brief site description for search engines -->
-    <meta name="description" content="Prime Ops Congo - Optimisation, Performance, Solutions.">
-    <meta name="keywords" content="Prime Ops, Congo, Mining, Logistics, Engineering, DRC, South Africa">
-    <meta name="author" content="Chela Yav">
+    <!-- SEO Information -->
+    <title>Contact Us | Prime Ops Congo</title>
 
+    <meta name="description" content="Contact Prime Ops Congo in Lubumbashi, DRC, for mining, logistics, construction and engineering services.">
+
+    <meta name="keywords" content="Prime Ops Congo, Contact, Mining, Logistics, Engineering, DRC, South Africa">
+
+    <meta name="author" content="Chela Yav">
+    <meta name="robots" content="index, follow">
+
+    <!-- Social Media SEO -->
+    <meta property="og:title" content="Contact Us | Prime Ops Congo">
+    <meta property="og:description" content="Get in touch with Prime Ops Congo for mining, logistics and engineering services.">
+    <meta property="og:type" content="website">
+
+    <!-- Leaflet Map CSS -->
+    <link rel="stylesheet"
+          href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+
+    <!-- Main CSS -->
     <link rel="stylesheet" href="css/style.css">
+
+    <!-- JavaScript -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" defer></script>
+    <script src="Java/script.js" defer></script>
+
 </head>
 
 <body style="background-color:bisque;">
 
+    <!-- HEADER -->
     <header>
-        <nav>
-            <img src="images/Logo.jpeg" style="width:65px;height:75px" alt="Prime Ops Logo">
 
-            <a href="home.html">Home |</a>
-            <a href="about.html">About us |</a>
-            <a href="services.html">Products and services |</a>
-            <a href="gallery.html">Gallery |</a>
-            <a href="contact.html">Contact us |</a>
+        <nav aria-label="Main navigation">
+
+            <img src="images/Logo.jpeg"
+                 style="width:65px; height:75px;"
+                 alt="Prime Ops Congo company logo">
+
+            <a href="home.html">Home</a>
+
+            <a href="about.html">About Us</a>
+
+            <a href="services.html">Products and Services</a>
+
+            <a href="gallery.html">Gallery</a>
+
+            <a href="enquiry.html">Enquiries</a>
+
+            <a href="contact.html" aria-current="page">Contact Us</a>
+
         </nav>
+
     </header>
 
-    <main>
+    <!-- MAIN CONTENT -->
+    <main class="contact-page">
 
-        <!-- Contact Card -->
-        <div class="contact-card">
-            <h2>Contact Prime Ops Congo</h2>
+        <h1>Contact Prime Ops Congo</h1>
 
-            <p><strong>Headquarters:</strong> Lubumbashi, DRC</p>
+        <p>
+            We welcome your questions, feedback and business enquiries.
+            Contact our team using the information or forms below.
+        </p>
+
+        <!-- CONTACT INFORMATION -->
+        <section class="contact-card">
+
+            <h2>Contact Information</h2>
+
+            <p>
+                <strong>Headquarters:</strong>
+                Lubumbashi, Democratic Republic of Congo
+            </p>
 
             <p>
                 <strong>Email:</strong>
+
                 <a href="mailto:contact@primeopscongo.cd">
                     contact@primeopscongo.cd
                 </a>
             </p>
 
-            <p><strong>Phone:</strong> +243 971 862 243</p>
-        </div>
+            <p>
+                <strong>Phone:</strong>
 
-        <!-- Contact Form -->
-        <form action="st10494424@rcconnect.edu.za" id="contactForm" novalidate>
+                <a href="tel:+243971862243">
+                    +243 971 862 243
+                </a>
+            </p>
 
-            <div class="form-group">
-                <label for="name">Full Name:</label>
-                <input type="text" id="name" name="name"
-                       required minlength="3">
+        </section>
 
-                <small class="error-msg" id="nameError"></small>
+        <!-- LUBUMBASHI MAP -->
+        <section class="location-section">
+
+            <h2>Find Our Headquarters</h2>
+
+            <p>
+                Visit us in Lubumbashi, Democratic Republic of the Congo.
+            </p>
+
+            <div id="map"
+                 role="application"
+                 aria-label="Map showing Lubumbashi, Democratic Republic of the Congo">
             </div>
 
-            <div class="form-group">
-                <label for="phone">Phone Number:</label>
-                <input type="tel" id="phone" name="phone"
-                       required placeholder="0821234567">
+        </section>
 
-                <small class="error-msg" id="phoneError"></small>
-            </div>
-            <div class="form-group">
-                <label for="email">Email Address:</label>
-                <input type="email" id="email" name="email"
-                       required placeholder="you@example.com">
+        <!-- GAUTENG MAP -->
+        <section class="location-section">
 
-                <small class="error-msg" id="emailError"></small>
+            <h2>Our Location in Gauteng, South Africa</h2>
+
+            <p>
+                Explore Gauteng, South Africa, where we also
+                focus on business and operational opportunities.
+            </p>
+
+            <div id="gautengMap"
+                 role="application"
+                 aria-label="Map showing Gauteng, South Africa">
             </div>
+
+        </section>
+
+        <!-- GENERAL CONTACT FORM -->
+        <section class="contact-box">
+
+            <h2>Send Us a Message</h2>
+
+            <p class="form-intro">
+                We would love to hear from you!
+                Complete the form below and our team
+                will be happy to assist you.
+            </p>
+
+            <form id="contactForm" novalidate>
+
+                <!-- Full Name -->
                 <div class="form-group">
-                    <label for="message">Message:</label>
-                    <textarea id="message" name="message" rows="5"
-                              required placeholder="Your message here..."></textarea>
 
-                    <small class="error-msg" id="messageError"></small>
+                    <label for="name">Full Name:</label>
+
+                    <input type="text"
+                           id="name"
+                           name="name"
+                           placeholder="Enter your full name"
+                           required
+                           minlength="3">
+
+                    <span id="nameError"
+                          class="error-msg"
+                          aria-live="polite"></span>
+
                 </div>
-            <button type="submit">Submit Message</button>
-        <!-- Success message -->
-    <p id="successMessage" role="status" aria-live="polite"></p>
-      <h2 style="text-align:center;">Send Us a Message</h2>
 
-<p style="text-align:center;">
-    Complete the form below and we will be happy to assist you.
-</p>
+                <!-- Phone -->
+                <div class="form-group">
 
-<form action="#" id="contactForm" novalidate>
+                    <label for="phone">Phone Number:</label>
 
+                    <input type="tel"
+                           id="phone"
+                           name="phone"
+                           placeholder="Enter your phone number"
+                           required>
 
-        </form>
+                    <span id="phoneError"
+                          class="error-msg"
+                          aria-live="polite"></span>
 
-        <!-- Welcome Message -->
-        <p id="welcome-text" style="text-align:center;">
-            Welcome to Prime Ops Congo
-        </p>
+                </div>
 
-        <button type="button" onclick="changeContent()">Change Content</button>
+                <!-- Email -->
+                <div class="form-group">
+
+                    <label for="email">Email Address:</label>
+
+                    <input type="email"
+                           id="email"
+                           name="email"
+                           placeholder="Enter your email address"
+                           required>
+
+                    <span id="emailError"
+                          class="error-msg"
+                          aria-live="polite"></span>
+
+                </div>
+
+                <!-- Message Type -->
+                <div class="form-group">
+
+                    <label for="messageType">Type of Message:</label>
+
+                    <select id="messageType"
+                            name="messageType"
+                            required>
+
+                        <option value="">Select message type</option>
+
+                        <option value="General Information">
+                            General Information
+                        </option>
+
+                        <option value="Customer Support">
+                            Customer Support
+                        </option>
+
+                        <option value="Partnership">
+                            Partnership
+                        </option>
+
+                        <option value="Feedback">
+                            Feedback
+                        </option>
+
+                        <option value="Other">
+                            Other
+                        </option>
+
+                    </select>
+
+                    <span id="messageTypeError"
+                          class="error-msg"
+                          aria-live="polite"></span>
+
+                </div>
+
+                <!-- Message -->
+                <div class="form-group">
+
+                    <label for="message">Your Message:</label>
+
+                    <textarea id="message"
+                              name="message"
+                              rows="6"
+                              placeholder="Write your message here..."
+                              required
+                              minlength="10"></textarea>
+
+                    <span id="messageError"
+                          class="error-msg"
+                          aria-live="polite"></span>
+
+                </div>
+
+                <button type="submit">
+                    Send Message
+                </button>
+
+                <p id="successMessage"
+                   role="status"
+                   aria-live="polite"></p>
+
+            </form>
+
+        </section>
+
+        <!-- BUSINESS ENQUIRY FORM -->
+        <section class="enquiry-section">
+
+            <h2>Business Enquiry</h2>
+
+            <p>
+                Tell us about your project and the services you require.
+                Our team will review your enquiry and respond with
+                relevant information about our services.
+            </p>
+
+            <form id="enquiryForm" novalidate>
+
+                <!-- Company Name -->
+                <div class="form-group">
+
+                    <label for="company">Company Name:</label>
+
+                    <input type="text"
+                           id="company"
+                           name="company"
+                           placeholder="Enter your company name"
+                           required>
+
+                </div>
+
+                <!-- Full Name -->
+                <div class="form-group">
+
+                    <label for="enquiryName">Full Name:</label>
+
+                    <input type="text"
+                           id="enquiryName"
+                           name="enquiryName"
+                           placeholder="Enter your full name"
+                           required
+                           minlength="3">
+
+                </div>
+
+                <!-- Email -->
+                <div class="form-group">
+
+                    <label for="enquiryEmail">Email Address:</label>
+
+                    <input type="email"
+                           id="enquiryEmail"
+                           name="enquiryEmail"
+                           placeholder="Enter your email address"
+                           required>
+
+                </div>
+
+                <!-- Phone -->
+                <div class="form-group">
+
+                    <label for="enquiryPhone">Phone Number:</label>
+
+                    <input type="tel"
+                           id="enquiryPhone"
+                           name="enquiryPhone"
+                           placeholder="Enter your phone number"
+                           required>
+
+                </div>
+
+                <!-- Service Required -->
+                <div class="form-group">
+
+                    <label for="enquiryService">Service Required:</label>
+
+                    <select id="enquiryService"
+                            name="enquiryService"
+                            required>
+
+                        <option value="">Select a service</option>
+
+                        <option value="Mining Solutions">
+                            Mining Solutions
+                        </option>
+
+                        <option value="Logistics">
+                            Logistics
+                        </option>
+
+                        <option value="Construction and Engineering">
+                            Construction and Engineering
+                        </option>
+
+                        <option value="Operations Management">
+                            Operations Management
+                        </option>
+
+                    </select>
+
+                </div>
+
+                <!-- Project Location -->
+                <div class="form-group">
+
+                    <label for="projectLocation">Project Location:</label>
+
+                    <input type="text"
+                           id="projectLocation"
+                           name="projectLocation"
+                           placeholder="Enter project location"
+                           required>
+
+                </div>
+
+                <!-- Project Description -->
+                <div class="form-group">
+
+                    <label for="enquiryMessage">
+                        Describe Your Enquiry:
+                    </label>
+
+                    <textarea id="enquiryMessage"
+                              name="enquiryMessage"
+                              rows="6"
+                              placeholder="Describe your project..."
+                              required
+                              minlength="10"></textarea>
+
+                </div>
+
+                <button type="submit">
+                    Submit Enquiry
+                </button>
+
+                <p id="enquiryFeedback"
+                   role="status"
+                   aria-live="polite"></p>
+
+            </form>
+
+        </section>
+
+        <!-- DYNAMIC CONTENT -->
+        <section class="dynamic-content">
+
+            <h2>Discover Prime Ops Congo</h2>
+
+            <p id="welcome-text" style="text-align:center;">
+                Welcome to Prime Ops Congo
+            </p>
+
+            <div style="text-align:center;">
+
+                <button type="button"
+                        onclick="changeContent()"
+                        style="background-color:#1f6f8b; color:white; padding:10px 20px; border:none; cursor:pointer;">
+
+                    Discover More
+
+                </button>
+
+            </div>
+
+        </section>
 
     </main>
 
-    <footer style="color:blue;">&copy; ST10494424#DISD1_PRIME_OPS<p id="datetime"></p></footer>
+    <!-- FOOTER -->
+    <footer style="color:blue; text-align:center;">
 
-    <!-- Link to the JavaScript file -->
-    <script src="Java/script.js"></script>
+        <p>&copy; 2026 Prime Ops Congo. All rights reserved.</p>
+
+        <p>
+            Lubumbashi, DRC |
+            contact@primeopscongo.cd |
+            +243 971 862 243
+        </p>
+
+        <p id="datetime"></p>
+
+    </footer>
 
 </body>
 </html>
+
+
+
+
+
+
+
+

@@ -1,74 +1,195 @@
+
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <title>about us</title>   
 
-<!-- Leaflet CSS -->
-<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
-<!-- Leaflet JS -->
-<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<head>
 
+    <meta charset="UTF-8">
 
-        
-    
-     <meta charset="UTF-8">
-     <!-- ensures the site adapts to phone, tablets and desktops -->
-       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-       <!--Brief site description for search engines-->
-       <meta name="description" content="Prime Ops Congo - Optimisation, Performance, Solutions.">
-       <meta name="keywords" content="Prime Ops, Congo, Mining, Logistics, Engineering, DRC, South Africa">
-       <meta name="author" content="Chela Yav ">
-       
-        
-        <link rel="stylesheet" href="css/style.css">
+    <!-- Responsive Design -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO: Page Information -->
+    <title>About Us | Prime Ops Congo</title>
+
+    <meta name="description" content="Learn about Prime Ops Congo, a strategic joint venture delivering mining, engineering and cross-border logistics solutions across the DRC and South Africa.">
+
+    <meta name="keywords" content="Prime Ops Congo, About Us, Mining, Logistics, Engineering, DRC, South Africa">
+
+    <meta name="author" content="Chela Yav">
+    <meta name="robots" content="index, follow">
+
+    <!-- Social Media SEO -->
+    <meta property="og:title" content="About Us | Prime Ops Congo">
+    <meta property="og:description" content="Discover Prime Ops Congo and our expertise in mining, engineering and logistics.">
+    <meta property="og:type" content="website">
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Main JavaScript -->
+    <script src="Java/script.js" defer></script>
 
 </head>
+
 <body style="background-color:bisque;">
 
+    <!-- Header and Navigation -->
     <header>
-        <nav>
-                <img src="images/Logo.jpeg" style = "width:65px;height:75px">
-                <a href="home.html">Home|</a>
-                <a href="about.html">About us|</a>
-                <a href="services.html">Products and services|</a>
-                <a href="gallery.html">Gallery|</a>
-                <a href="contact.html">Contact us|</a>
-                            
-        </nav> 
-                <h1>Prime Ops Congo</h1>
-                <h2><p  ><em>Optimization.Performance.Solutoin.</em></p></h2>
-            </style>                  
-        </nav> 
-    </header> 
+
+        <nav aria-label="Main navigation">
+
+            <img src="images/Logo.jpeg"
+                 alt="Prime Ops Congo company logo"
+                 style="width:65px; height:75px;">
+
+            <a href="home.html">Home</a>
+
+            <a href="about.html" aria-current="page">About Us</a>
+
+            <a href="services.html">Products and Services</a>
+
+            <a href="gallery.html">Gallery</a>
+
+            <a href="enquiry.html">Enquiries</a>
+
+            <a href="contact.html">Contact Us</a>
+
+        </nav>
+
+    </header>
+
     <hr>
-       
 
-  <main> 
-    <!--About/Mission --->
-    <section id = "about">
-        <h2> Prime Ops</h2>
-        <p> prime ops is a strategic joint venture uniting regional expertise across the Deocratic Republic of Congo and
-            South Africa to deliver world-class solutions in minig,engineering,and accross-border logistics.
-        </p> 
-     <!--video showcase-->
-     <section id="video-showcase">
-      <h2> operations overview</h2>
-      <p>To give you a better visual overview, here is a quick clip.</p>
+    <main>
 
-        <video width = "100%" height="850px" controls>   
-          <source src ="Images/PrimeOps(4).mp4" type="video/mp4">
-        </video>    
-    </section>
-    <!---button Statement--->
-    <p id ="welcome-text" style="text-align:center;">Welcome to Prime Ops Congo</p>
-    <button type="button" onclick="changeContent()">change Content</button>
-    
+        <!-- About / Company Overview Section -->
+        <section id="about">
 
-  </main>
-       <footer style="color:blue;">&copy;ST10494424#DISD1_PRIME_OPS<p id="datetime"></p>
-      
-        </footer>
-        <!--link to the script file-->
-        <script src="Java/script.js"></script>  
-    </body>
+            <h1>About Prime Ops Congo</h1>
+
+            <h2>Who We Are</h2>
+
+            <p>
+                Prime Ops is a strategic joint venture uniting
+                regional expertise across the Democratic Republic
+                of Congo and South Africa to deliver world-class
+                solutions in mining, engineering and
+                cross-border logistics.
+            </p>
+
+            <p>
+                Our goal is to support businesses through
+                operational planning, professional expertise
+                and integrated solutions that improve efficiency
+                and performance across different industries.
+            </p>
+
+        </section>
+
+        <!-- Mission and Values Section -->
+        <section id="mission">
+
+            <h2>Our Mission</h2>
+
+            <p>
+                Our mission is to provide reliable and effective
+                mining, engineering and logistics solutions
+                while supporting operational excellence
+                across the DRC and South Africa.
+            </p>
+
+            <h2>Our Core Values</h2>
+
+            <ul>
+                <li>Professionalism</li>
+                <li>Innovation</li>
+                <li>Reliability</li>
+                <li>Operational Excellence</li>
+                <li>Collaboration</li>
+            </ul>
+
+        </section>
+
+        <!-- Video Showcase Section -->
+        <section id="video-showcase">
+
+            <h2>Operations Overview</h2>
+
+            <p>
+                To give you a better visual overview
+                of our company and operations, watch
+                the video below.
+            </p>
+
+            <video width="100%" controls preload="metadata">
+
+                <source src="images/PrimeOps(4).mp4" type="video/mp4">
+
+                Your browser does not support the video element.
+
+            </video>
+
+        </section>
+
+        <!-- Interactive Button Section -->
+        <section class="dynamic-content">
+
+            <h2>Discover Prime Ops</h2>
+
+            <p id="welcome-text" style="text-align:center;">
+                Welcome to Prime Ops Congo
+            </p>
+
+            <div style="text-align:center;">
+
+                <button type="button"
+                        onclick="changeContent()"
+                        style="background-color:#1f6f8b; color:white; padding:10px 20px; border:none; cursor:pointer;">
+
+                    Discover More
+
+                </button>
+
+            </div>
+
+        </section>
+
+        <!-- Enquiry Link -->
+        <section>
+
+            <h2>Work With Us</h2>
+
+            <p>
+                Are you interested in our services or would
+                you like to discuss a business opportunity?
+                Contact our team today.
+            </p>
+
+            <a href="enquiry.html">Submit a Business Enquiry</a>
+
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer style="color:blue;">
+
+        <p>&copy; 2026 Prime Ops Congo. All rights reserved.</p>
+
+        <p>
+            Lubumbashi, DRC |
+            contact@primeopscongo.cd |
+            +243 971 862 243
+        </p>
+
+        <p id="datetime"></p>
+
+    </footer>
+
+</body>
 </html>
+
+
+
+

@@ -1,103 +1,423 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <title>services</title> 
-        
-    
-     <meta charset="UTF-8">
-     <!-- ensures the site adapts to phone, tablets and desktops -->
-       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-       <!--Brief site description for search engines-->
-       <meta name="description" content="Prime Ops Congo - Optimisation, Performance, Solutions.">
-       <meta name="keywords" content="Prime Ops, Congo, Mining, Logistics, Engineering, DRC, South Africa">
-       <meta name="author" content="Chela Yav ">
-       <initial-scale=1.0"></initial-scale>
 
-        <link rel="stylesheet" href="css/style.css">      
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO: Page Information -->
+    <title>Products and Services | Prime Ops Congo</title>
+
+    <meta name="description" content="Explore Prime Ops Congo's mining, logistics, construction, engineering and operations management services in the DRC and South Africa.">
+
+    <meta name="keywords" content="Prime Ops Congo, Mining, Logistics, Engineering, Construction, Operations Management, DRC, South Africa">
+
+    <meta name="author" content="Chela Yav">
+    <meta name="robots" content="index, follow">
+
+    <!-- Social Media SEO -->
+    <meta property="og:title" content="Products and Services | Prime Ops Congo">
+    <meta property="og:description" content="Discover our mining, engineering, construction and cross-border logistics solutions.">
+    <meta property="og:type" content="website">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- JavaScript -->
+    <script src="Java/script.js" defer></script>
+
 </head>
-<body style="background-color: bisque;">
+
+<body style="background-color:bisque;">
+
+    <!-- HEADER AND NAVIGATION -->
     <header>
-        <nav>
-                <img src="images/Logo.jpeg" style = "width:65px;height:75px">
-                <a href="home.html">Home|</a>
-                <a href="about.html">About us|</a>
-                <a href="services.html">Products and services|</a>
-                <a href="gallery.html">Gallery|</a>
-                <a href="contact.html">Contact us|</a>
-                             
-        </nav>   
-            </style>                  
-        </nav> 
-    </header>    
 
-  <main> 
-     <!-- ================= SERVICES SECTION ================= -->
+        <nav aria-label="Main navigation">
+
+            <img src="images/Logo.jpeg"
+                 style="width:65px; height:75px;"
+                 alt="Prime Ops Congo company logo">
+
+            <a href="home.html">Home</a>
+
+            <a href="about.html">About Us</a>
+
+            <a href="services.html" aria-current="page">Products and Services</a>
+
+            <a href="gallery.html">Gallery</a>
+
+            <a href="enquiry.html">Enquiries</a>
+
+            <a href="contact.html">Contact Us</a>
+
+        </nav>
+
+    </header>
+
+    <!-- MAIN CONTENT -->
+    <main>
+
+        <!-- SERVICES SECTION -->
         <section id="services">
-            <h2>Our Core Services</h2>
-            <p>Explore the specialized solutions and technical expertise we provide:</p>
 
-            <div class="services-container">
-                <!-- Service Item 1 -->
-                <article class="service-card">
-                    <h3>Construction & Engineering</h3>
-                    <p>Comprehensive industrial planning, structural blueprints, and site development.</p>
+            <h1>Our Core Services</h1>
+
+            <p>
+                Explore the specialised solutions and technical
+                expertise we provide to support business operations
+                across the Democratic Republic of Congo and South Africa.
+            </p>
+
+            <!-- SERVICE SEARCH AND FILTER -->
+            <section class="service-search">
+
+                <h2>Find Our Services</h2>
+
+                <input type="text"
+                       id="serviceSearch"
+                       placeholder="Search for a service..."
+                       aria-label="Search services">
+
+                <select id="serviceFilter"
+                        aria-label="Filter services by category">
+
+                    <option value="all">All Services</option>
+                    <option value="engineering">Engineering</option>
+                    <option value="logistics">Logistics</option>
+                    <option value="mining">Mining</option>
+                    <option value="management">Management</option>
+
+                </select>
+
+            </section>
+
+            <!-- SERVICE CARDS -->
+            <div class="service-container">
+
+                <!-- Engineering -->
+                <article class="service-card"
+                         data-category="engineering">
+
+                    <h3>Construction &amp; Engineering</h3>
+
+                    <p>
+                        Comprehensive industrial planning,
+                        structural blueprints and site development.
+                    </p>
+
+                    <button type="button"
+                            onclick="showServiceDetails('engineering')">
+                        Learn More
+                    </button>
+
+                    <p>
+                        <a href="enquiry.html">Request a Quotation</a>
+                    </p>
+
                 </article>
 
-                <!-- Service Item 2 -->
-                <article class="service-card">
+                <!-- Logistics -->
+                <article class="service-card"
+                         data-category="logistics">
+
                     <h3>Cross-Border Logistics</h3>
-                    <p>End-to-end supply chain management, heavy cargo transportation, and route optimization.</p>
+
+                    <p>
+                        End-to-end supply chain management,
+                        heavy cargo transportation and route optimisation.
+                    </p>
+
+                    <button type="button"
+                            onclick="showServiceDetails('logistics')">
+                        Learn More
+                    </button>
+
+                    <p>
+                        <a href="enquiry.html">Request a Quotation</a>
+                    </p>
+
                 </article>
 
-                <!-- Service Item 3 -->
-                <article class="service-card">
+                <!-- Mining -->
+                <article class="service-card"
+                         data-category="mining">
+
                     <h3>Mining Solutions</h3>
-                    <p>Full-scale site operations management and raw material handling infrastructure.</p>
+
+                    <p>
+                        Full-scale site operations management
+                        and raw material handling infrastructure.
+                    </p>
+
+                    <button type="button"
+                            onclick="showServiceDetails('mining')">
+                        Learn More
+                    </button>
+
+                    <p>
+                        <a href="enquiry.html">Request a Quotation</a>
+                    </p>
+
                 </article>
 
-                <!-- Service Item 4 -->
-                <article class="service-card">
+                <!-- Management -->
+                <article class="service-card"
+                         data-category="management">
+
                     <h3>Operations Management</h3>
-                    <p>Real-time satellite tracking, control center monitoring, and performance analytics.</p>
+
+                    <p>
+                        Real-time satellite tracking,
+                        control centre monitoring and performance analytics.
+                    </p>
+
+                    <button type="button"
+                            onclick="showServiceDetails('management')">
+                        Learn More
+                    </button>
+
+                    <p>
+                        <a href="enquiry.html">Request a Quotation</a>
+                    </p>
+
                 </article>
+
             </div>
+
+            <!-- NO SEARCH RESULTS MESSAGE -->
+            <p id="noServices" style="display:none;" role="status">
+                No services match your search. Please try another keyword.
+            </p>
+
         </section>
 
         <hr>
-            
-        <!-- ================= PROJECTS SECTION ================= -->
+
+        <!-- FEATURED PROJECTS SECTION -->
         <section id="projects">
+
             <h2>Featured Projects</h2>
-            <p>Highlights of recent joint operations and key infrastructure developments:</p>
+
+            <p>
+                Highlights of joint operations and key
+                infrastructure developments.
+            </p>
 
             <div class="projects-container">
-                <!-- Project 1 -->
+
                 <article class="project-card">
-                    <img src="images/Image7.jpg" alt="Mining Processing Facility" width="400">
+
+                    <img src="images/Image7.jpg"
+                         alt="Mining processing facility in Haut-Katanga"
+                         width="400"
+                         loading="lazy">
+
                     <h3>Joint Venture Mining Operations</h3>
-                    <p><strong>Location:</strong> Haut-Katanga, DRC</p>
-                    <p>Development of a multi-structure processing facility equipped with heavy haulage systems and aerial helipad integration.</p>
+
+                    <p>
+                        <strong>Location:</strong> Haut-Katanga, DRC
+                    </p>
+
+                    <p>
+                        Development of a multi-structure processing
+                        facility equipped with heavy haulage systems
+                        and aerial helipad integration.
+                    </p>
+
                 </article>
 
-                <!-- Project 2 -->
                 <article class="project-card">
-                    <img src="images/Image8.jpg" alt="High-Tech Operations Control Room" width="400">
-                    <h3>Regional Command & Control Center</h3>
-                    <p><strong>Location:</strong> Regional Network (DRC & South Africa)</p>
-                    <p>Implementation of a centralized monitoring hub featuring multi-screen live satellite mapping and logistics analytics.</p>
-                </article>
-            </div>
-        </section> 
-         <!---button Statement--->
-    <p id ="welcome-text" style="text-align:center;">Welcome to Prime Ops Congo</p>
-    <button type="button" onclick="changeContent()">change Content</button>
-    
 
-  </main>
-  <footer style="color:blue;">&copy;ST10494424#DISD1_PRIME_OPS<p id="datetime"></p>
-      
-        </footer>
-        <!--link to the script file-->
-        <script src="Java/script.js"></script> 
-    </body>
-</html>      
+                    <img src="images/Image8.jpg"
+                         alt="High-tech regional operations control room"
+                         width="400"
+                         loading="lazy">
+
+                    <h3>Regional Command &amp; Control Center</h3>
+
+                    <p>
+                        <strong>Location:</strong>
+                        Regional Network (DRC &amp; South Africa)
+                    </p>
+
+                    <p>
+                        Implementation of a centralised monitoring
+                        hub featuring multi-screen live satellite
+                        mapping and logistics analytics.
+                    </p>
+
+                </article>
+
+            </div>
+
+        </section>
+
+        <hr>
+
+        <!-- SERVICE DETAILS MODAL -->
+        <div id="serviceModal"
+             class="service-modal"
+             role="dialog"
+             aria-modal="true"
+             aria-labelledby="modalTitle"
+             aria-hidden="true">
+
+            <div class="service-modal-content">
+
+                <button type="button"
+                        class="close-modal"
+                        onclick="closeServiceModal()"
+                        aria-label="Close service details">
+                    &times;
+                </button>
+
+                <h2 id="modalTitle"></h2>
+
+                <p id="modalDescription"></p>
+
+                <a href="enquiry.html">Enquire About This Service</a>
+
+            </div>
+
+        </div>
+
+        <!-- FAQ SECTION -->
+        <section class="faq-section">
+
+            <h2>Frequently Asked Questions</h2>
+
+            <div class="faq-item">
+
+                <button type="button"
+                        class="faq-question"
+                        aria-expanded="false">
+
+                    What services does Prime Ops Congo provide?
+
+                </button>
+
+                <div class="faq-answer">
+
+                    <p>
+                        Prime Ops Congo provides mining, logistics,
+                        construction, engineering and operations
+                        management solutions.
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="faq-item">
+
+                <button type="button"
+                        class="faq-question"
+                        aria-expanded="false">
+
+                    Where is Prime Ops Congo located?
+
+                </button>
+
+                <div class="faq-answer">
+
+                    <p>
+                        Our headquarters are located in
+                        Lubumbashi, Democratic Republic of Congo.
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="faq-item">
+
+                <button type="button"
+                        class="faq-question"
+                        aria-expanded="false">
+
+                    How can I request a quotation?
+
+                </button>
+
+                <div class="faq-answer">
+
+                    <p>
+                        You can submit a business enquiry using
+                        our Enquiries page. Provide your contact
+                        details and project requirements so our
+                        team can respond.
+                    </p>
+
+                    <a href="enquiry.html">Submit an Enquiry</a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- DYNAMIC CONTENT -->
+        <section class="dynamic-content">
+
+            <h2>Discover Prime Ops Congo</h2>
+
+            <p id="welcome-text" style="text-align:center;">
+                Welcome to Prime Ops Congo
+            </p>
+
+            <div style="text-align:center;">
+
+                <button type="button"
+                        onclick="changeContent()"
+                        style="background-color:#1f6f8b; color:white; padding:10px 20px; border:none; cursor:pointer;">
+
+                    Discover More
+
+                </button>
+
+            </div>
+
+        </section>
+
+        <!-- CONTACT CALL TO ACTION -->
+        <section>
+
+            <h2>Interested in Our Services?</h2>
+
+            <p>
+                Contact Prime Ops Congo to discuss your
+                business requirements and project opportunities.
+            </p>
+
+            <a href="contact.html">Contact Us</a>
+
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer style="color:blue; text-align:center;">
+
+        <p>&copy; 2026 Prime Ops Congo. All rights reserved.</p>
+
+        <p>
+            Lubumbashi, DRC |
+            contact@primeopscongo.cd |
+            +243 971 862 243
+        </p>
+
+        <p id="datetime"></p>
+
+    </footer>
+
+</body>
+</html>
+
+
+
+
+   

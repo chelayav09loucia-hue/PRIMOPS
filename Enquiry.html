@@ -1,0 +1,112 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Business Enquiries | Prime Ops Congo</title>
+
+    <meta name="description" content="Submit a business enquiry to Prime Ops Congo for mining, logistics and engineering services in the DRC and South Africa.">
+    <meta name="keywords" content="Prime Ops Congo, business enquiries, mining, logistics, engineering, DRC, South Africa">
+    <meta name="author" content="Chela Yav">
+
+    <link rel="stylesheet" href="css/style.css">
+    <script src="Java/script.js" defer></script>
+</head>
+
+<body>
+
+<header>
+    <h2>Prime Ops Congo</h2>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="services.html">Products and Services</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="enquiry.html" aria-current="page">Enquiries</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+
+    <h1>Business Enquiries</h1>
+
+    <p>
+        Thank you for your interest in Prime Ops Congo.
+        Complete the form below and our team will get back to you.
+    </p>
+
+    <form id="enquiryForm" novalidate>
+
+        <label for="company">Company Name:</label>
+        <input type="text" id="company" name="company"
+               minlength="2" required>
+
+        <label for="enquiryName">Full Name:</label>
+        <input type="text" id="enquiryName" name="fullName"
+               minlength="3" required>
+
+        <label for="enquiryEmail">Email Address:</label>
+        <input type="email" id="enquiryEmail" name="email" required>
+
+        <label for="enquiryPhone">Phone Number:</label>
+        <input type="tel" id="enquiryPhone" name="phone"
+               required>
+
+        <label for="enquiryType">Type of Enquiry:</label>
+        <select id="enquiryType" name="enquiryType" required>
+            <option value="">Select enquiry type</option>
+            <option value="Service quotation">Service quotation</option>
+            <option value="Product enquiry">Product enquiry</option>
+            <option value="Volunteering">Volunteering</option>
+            <option value="Sponsorship">Sponsorship</option>
+            <option value="Partnership">Partnership</option>
+            <option value="Other">Other</option>
+        </select>
+
+        <label for="enquiryService">Service Required:</label>
+        <select id="enquiryService" name="service" required>
+            <option value="">Select a service</option>
+            <option value="Mining">Mining</option>
+            <option value="Logistics">Logistics</option>
+            <option value="Engineering">Engineering</option>
+            <option value="Project Management">Project Management</option>
+            <option value="Other">Other</option>
+        </select>
+
+        <label for="projectLocation">Project Location:</label>
+        <input type="text" id="projectLocation" name="location"
+               required>
+
+        <label for="enquiryBudget">Estimated Budget (optional):</label>
+        <input type="text" id="enquiryBudget" name="estimatedBudget"
+               placeholder="Enter your estimated budget">
+
+        <label for="enquiryMessage">Tell us about your enquiry:</label>
+        <textarea id="enquiryMessage" name="message"
+                  rows="5" minlength="10" required></textarea>
+
+        <button type="submit">Submit Enquiry</button>
+
+    </form>
+
+    <p id="enquiryFeedback" role="status" aria-live="polite"></p>
+
+</main>
+
+<footer>
+    <p>&copy; 2026 Prime Ops Congo. All rights reserved.</p>
+    <p>Lubumbashi, DRC | contact@primeopscongo.cd | +243 971 862 243</p>
+    <p id="datetime"></p>
+</footer>
+
+</body>
+</html>
